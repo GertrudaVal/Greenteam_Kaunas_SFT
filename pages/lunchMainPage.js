@@ -57,6 +57,12 @@ exports.LunchMainPage = class LunchMainPage {
     await this.page.click(".v-chip__content > .v-icon"); 
     
   }
+  async checkOrderHistory(order) { 
+    
+    await page.click('text="Užsakymų istorija"');
+      await page.isVisible(`text="${order}"`); //`text="${dish}"` 
+    
+  }
   
 
   

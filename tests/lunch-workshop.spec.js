@@ -11,7 +11,8 @@ const { LunchMainPage } = require("../pages/lunchMainPage");
     });
 
     test.beforeEach(async () => {
-      //await startPage.goto();
+      //await startPage.goto(); 
+      //removed, because it went to the login page for some reason
       
     });
     test("one time log in", async () => { //setup
@@ -22,16 +23,16 @@ const { LunchMainPage } = require("../pages/lunchMainPage");
     //Only works with monday because of method issues
     await startPage.pickAmberGrillMonday();
       });
-    test("order CRUD", async () => { 
+    test("create order", async () => { 
       await startPage.assertAndPickDish("Burgeris");      
       await startPage.confirmOrder();
-      await page.click('text="Užsakymų istorija"');
-      await page.isVisible('text="Burgeris"'); //`text="${dish}"`
-      await startPage.pickDay("Pirmadienis");
-      await startPage.clearOrder(); 
-
-      
+        
     });
+    test("check order history", async () => { 
+      await startPage.checkOrderHistory("Burgeris");
+              
+    });
+
 
    
   });
