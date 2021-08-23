@@ -3,9 +3,9 @@
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   use: {
-    headless: true,
+    headless: false,
     viewport: { width: 1280, height: 720 },
-    //launchOptions: { slowMo: 2000 },
+    launchOptions: { slowMo: 1000 },
   },
 };
 
