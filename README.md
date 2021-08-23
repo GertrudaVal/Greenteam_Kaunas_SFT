@@ -1,2 +1,1 @@
-# Gertruda_HW
- Automation testing homework SFT
+Kaunas Green Team tests
